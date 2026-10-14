@@ -1,0 +1,31 @@
+{
+  "name": "butterflow",
+  "version": "1.0.0",
+  "description": "Ultra-Smooth Software KVM & Cross-PC Collaboration Application",
+  "main": "src/main/index.js",
+  "scripts": {
+    "start": "electron .",
+    "start:node": "node src/main/index.js",
+    "test": "node tests/runAllTests.js",
+    "compile:native": "powershell -ExecutionPolicy Bypass -File src/main/native/compile.ps1"
+  },
+  "keywords": [
+    "kvm",
+    "software-kvm",
+    "mouse-sharing",
+    "keyboard-sharing",
+    "screen-sharing",
+    "file-transfer",
+    "clipboard-sync"
+  ],
+  "author": "ButterFlow Core Engineering Team",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^4.21.2",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "electron": "^34.0.0"
+  }
+}

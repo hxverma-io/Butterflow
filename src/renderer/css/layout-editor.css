@@ -1,0 +1,160 @@
+/* Multi-Monitor Virtual Screen Layout Editor */
+
+.layout-editor-container {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.layout-canvas-wrapper {
+    width: 100%;
+    height: 480px;
+    background: var(--bg-sidebar);
+    border: 1px dashed var(--border-color);
+    border-radius: var(--radius-sm);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.layout-canvas {
+    position: relative;
+    width: 900px;
+    height: 420px;
+    background-image: 
+        radial-gradient(circle, var(--border-color) 1px, transparent 1px);
+    background-size: 20px 20px;
+    border-radius: var(--radius-sm);
+}
+
+.screen-box {
+    position: absolute;
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    background: var(--bg-card);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+    user-select: none;
+    transition: box-shadow var(--transition-fast), border-color var(--transition-fast);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+.screen-box:active {
+    cursor: grabbing;
+}
+
+.screen-box.local {
+    border-color: var(--accent-blue);
+    background: rgba(56, 189, 248, 0.08);
+}
+
+.screen-box.remote {
+    border-color: var(--accent-amber);
+    background: rgba(245, 158, 11, 0.08);
+}
+
+.screen-box.active-focus {
+    box-shadow: 0 0 20px var(--accent-amber-glow), 0 0 0 2px var(--accent-amber);
+}
+
+.screen-box-header {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+}
+
+.screen-box-title {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 4px 0;
+    color: var(--text-primary);
+}
+
+.screen-box-res {
+    font-size: 11px;
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+}
+
+.screen-edge-indicator {
+    position: absolute;
+    background: var(--accent-amber);
+    border-radius: 2px;
+}
+
+.screen-edge-indicator.right {
+    top: 10px;
+    bottom: 10px;
+    right: -3px;
+    width: 4px;
+}
+
+.screen-edge-indicator.left {
+    top: 10px;
+    bottom: 10px;
+    left: -3px;
+    width: 4px;
+}
+
+.screen-edge-indicator.top {
+    left: 10px;
+    right: 10px;
+    top: -3px;
+    height: 4px;
+}
+
+.screen-edge-indicator.bottom {
+    left: 10px;
+    right: 10px;
+    bottom: -3px;
+    height: 4px;
+}
+
+.layout-legend {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legend-box {
+    width: 14px;
+    height: 10px;
+    border-radius: 2px;
+    border: 1px solid;
+}
+
+.legend-box.local {
+    border-color: var(--accent-blue);
+    background: rgba(56, 189, 248, 0.3);
+}
+
+.legend-box.remote {
+    border-color: var(--accent-amber);
+    background: rgba(245, 158, 11, 0.3);
+}
+
+.legend-line {
+    width: 16px;
+    height: 3px;
+    background: var(--accent-amber);
+    border-radius: 2px;
+}

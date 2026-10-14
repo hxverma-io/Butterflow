@@ -1,0 +1,11 @@
+--- BUTTERFLOW 1000Hz ENGINE BENCHMARK ---
+Duration: 60s (60000 packets @ 1000 Hz)
+Simulated Network Packet Loss: 3%
+Packets Dropped by Channel: 1788
+Packets Recovered via Redundant Multi-Delta: 1779
+Effective Cursor Motion Loss: 0.015%
+Latency p50 (Median): 1.77 ms
+Latency p95: 2.16 ms
+Latency p99 (Worst Case SLA): 2.19 ms
+Average RFC 3550 Jitter: 0.37 ms
+SLA Verification: ✅ PASSED (< 5ms typical, < 15ms worst-case)

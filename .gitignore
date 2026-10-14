@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# ButterFlow local runtime data
+.butterflow/
+Downloads/
+*.tmp
+*.butterflow.tmp
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS Files
+Thumbs.db
+.DS_Store
